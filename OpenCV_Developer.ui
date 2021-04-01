@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>834</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>471</width>
+      <height>559</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="ImageLayout">
+     <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+      <widget class="QLabel" name="viewlabel">
+       <property name="minimumSize">
+        <size>
+         <width>469</width>
+         <height>539</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>469</width>
+         <height>539</height>
+        </size>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(199, 199, 199);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>471</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="ThresholdLayout">
+     <item row="2" column="1">
+      <widget class="QLabel" name="th_slider_num">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="th_text">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Threshold : </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QSlider" name="th_horizontalSlider">
+       <property name="minimumSize">
+        <size>
+         <width>385</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>385</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="maximum">
+        <number>50</number>
+       </property>
+       <property name="value">
+        <number>15</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="button_mode_label">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>580</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>button mode</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>471</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QToolButton" name="selectDir_toolButton">
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="mouse_position_label">
+       <property name="maximumSize">
+        <size>
+         <width>120</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>mouse position</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="image_progress_label">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>image progress</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" rowspan="2">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="LOAD_pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>LOAD</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="pose_label">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="text">
+        <string>Pose</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="image_name_label">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="text">
+        <string>Image Name</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="message_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>580</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>700</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="text">
+     <string>message area</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>640</y>
+      <width>471</width>
+      <height>63</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="Distal_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>91</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 0);
+font: 9pt &quot;MS UI Gothic&quot;;
+selection-background-color: rgb(0, 170, 0);</string>
+       </property>
+       <property name="text">
+        <string>DistalPhalanx</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Middle_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>91</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 0, 0);
+font: 9pt &quot;MS UI Gothic&quot;;
+selection-background-color: rgb(170, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Middle Phalanx</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Proximal_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>91</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(38, 143, 255);
+font: 9pt &quot;MS UI Gothic&quot;;
+selection-background-color: rgb(0, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>Proximal Phalanx</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Metacarpal_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>91</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 127);
+selection-background-color: rgb(150, 150, 75);
+font: 9pt &quot;MS UI Gothic&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Metacarpal</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="DEL_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>71</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;MS UI Gothic&quot;;
+text-decoration: underline;
+selection-background-color: rgb(220, 220, 220);
+background-color: rgb(220, 220, 220);</string>
+       </property>
+       <property name="text">
+        <string>DEL</string>
+       </property>
+       <property name="shortcut">
+        <string>Del</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>710</y>
+      <width>471</width>
+      <height>83</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="BACK_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>191</width>
+         <height>81</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+text-decoration: underline;
+font: 9pt &quot;MS UI Gothic&quot;;</string>
+       </property>
+       <property name="text">
+        <string>BACK (&lt;-)</string>
+       </property>
+       <property name="shortcut">
+        <string>Left</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="OK_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>71</width>
+         <height>81</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+text-decoration: underline;
+font: 9pt &quot;MS UI Gothic&quot;;</string>
+       </property>
+       <property name="text">
+        <string>OK (O)</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="NEXT_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>191</width>
+         <height>81</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+text-decoration: underline;
+font: 9pt &quot;MS UI Gothic&quot;;</string>
+       </property>
+       <property name="text">
+        <string>NEXT (-&gt;)</string>
+       </property>
+       <property name="shortcut">
+        <string>Right</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>491</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open(Image)</string>
+     </property>
+     <addaction name="actionOpen_O"/>
+     <addaction name="actionOpen_dir"/>
+    </widget>
+    <addaction name="menuOpen"/>
+    <addaction name="actionOpen_json"/>
+    <addaction name="actionSave_S"/>
+    <addaction name="actionQuit_Q"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Processing">
+    <property name="title">
+     <string>Image Processing</string>
+    </property>
+    <addaction name="actionGray_scale_transformation_G"/>
+    <addaction name="actionBinarization_B"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuImage_Processing"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave_S">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuit_Q">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionGray_scale_transformation_G">
+   <property name="text">
+    <string>Gray_scale_transformation</string>
+   </property>
+  </action>
+  <action name="actionBinarization_B">
+   <property name="text">
+    <string>Binarization</string>
+   </property>
+  </action>
+  <action name="actionOpen_O">
+   <property name="text">
+    <string>File</string>
+   </property>
+  </action>
+  <action name="actionOpen_dir">
+   <property name="text">
+    <string>Dir</string>
+   </property>
+  </action>
+  <action name="actionOpen_json">
+   <property name="text">
+    <string>Open(json)</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
